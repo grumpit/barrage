@@ -20,10 +20,8 @@ class Dstat
       if start_parsing
         time.push(count - 7)
         values.push(row[column])
-      end
-
-      if !start_parsing && count == 7
-        start_parsing = true
+      else 
+        start_parsing = true if count == 7
       end
 
       count += 1
